@@ -17,9 +17,9 @@ import rx.Observable;
 public class ObservableFrom {
     public static void main(String[] args) {
         List<String> words = Arrays.asList(
-            "Een",
-            "WorkShop",
-            "Voor",
+            "EEN",
+            "WORKSHOP",
+            "VOOR",
             "PAFR"
         );
         Observable<String> obs1 = Observable.from(words).map(s -> "(iets er voor?)" + s);
