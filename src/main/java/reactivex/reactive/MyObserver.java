@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package io.reactivex.reactive;
+package reactivex.reactive;
 
 import rx.Observable;
 import rx.Observer;

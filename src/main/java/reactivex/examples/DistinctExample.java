@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package io.reactivex.examples;
+package reactivex.examples;
 
 import rx.Observable;
 import rx.Subscription;
@@ -12,16 +12,23 @@ import rx.Subscription;
  *
  * @author Matthias
  */
-public class FilterExample {
+public class DistinctExample {
     public static void main(String[] args) {
-        Observable<Integer> values = Observable.range(0,10);
-        Subscription oddNumbers = values
-            .filter(v -> v % 2 == 0)
+        Observable<String> values = Observable.create(o -> {
+            o.onNext("a");
+            o.onNext("b");
+            o.onNext("a");
+            o.onNext("a");
+            o.onNext("c");
+            o.onCompleted();
+        });
+
+        Subscription subscription = values
+            .distinct()
             .subscribe(
                 v -> System.out.println(v),
                 e -> System.out.println("Error: " + e),
                 () -> System.out.println("Completed")
-        );
+            );
     }
-   
 }

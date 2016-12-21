@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package io.reactivex.examples;
+package reactivex.examples;
 
 import java.util.Arrays;
 import java.util.List;
-import io.reactivex.reactive.MyObserver;
+import reactivex.reactive.MyObserver;
 import rx.Observable;
 
 /**
