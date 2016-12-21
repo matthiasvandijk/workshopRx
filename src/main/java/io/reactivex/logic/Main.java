@@ -33,5 +33,6 @@ public class Main {
         System.out.println("Pas3 :" + Data.p3.getBalance());
         
         Data.bus20.passengers.onNext(Data.p4);
+        
     }
 }
