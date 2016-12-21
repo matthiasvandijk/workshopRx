@@ -26,7 +26,7 @@ public class BusStop {
 
     @Override
     public String toString() {
-        return "BusStop{" + "naam=" + naam + '}';
+        return "BusStop{" + "name=" + naam + '}';
     }
     
 }

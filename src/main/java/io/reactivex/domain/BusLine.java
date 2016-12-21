@@ -31,6 +31,21 @@ public class BusLine {
         return busConnections.get(busConnections.size() - 1).getEnd();
     }
     
+    public double getRateByBusStop(BusStop currentBusStop, BusStop endDestionation) {
+        boolean reversed = false;
+        // A bus will travel from b --> a (this is called reversed) instead from a --> b (the normal flow)
+        if (this.getStartPoint().equals(endDestionation)) { reversed = true; }
+        
+        for (BusConnection busCon : busConnections) {
+            if (!reversed && busCon.getStart().equals(currentBusStop)) {
+                return busCon.getRate();
+            } else if (reversed && busCon.getEnd().equals(currentBusStop)) {
+                return busCon.getRate();
+            }
+        }
+        return 0.0;
+    }
+    
     public BusStop reverseEndDestination(BusStop currentEndDestionation) {
         if (currentEndDestionation.equals(this.getEndPoint())) {
             return this.getStartPoint();

@@ -33,7 +33,7 @@ public class BusLogic {
         if (nextStop.equals(bus.getEndDestination())) {
             bus.setEndDestination(bus.getBusLine().reverseEndDestination(bus.getEndDestination()));
         }
-        
+
         System.out.println(bus.toString());
     }
 }

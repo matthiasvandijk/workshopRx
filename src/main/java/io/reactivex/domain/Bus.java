@@ -17,7 +17,7 @@ public class Bus {
     private BusStop currentBusStop;
     private BusStop endDestination;
     
-    public ReplaySubject<Passenger> passengers = ReplaySubject.create();   
+    public ReplaySubject<Passenger> passengers = ReplaySubject.create(); 
 
     public Bus(int id, BusLine busLine) {
         this.id = id;

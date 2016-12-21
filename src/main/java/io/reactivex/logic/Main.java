@@ -27,8 +27,11 @@ public class Main {
         Data.bus20.passengers.onNext(Data.p1);
         Data.bus20.passengers.onNext(Data.p2);
         Data.bus20.passengers.onNext(Data.p3);
-        bl.goToNextStop(Data.bus20);  
+        System.out.println("Pas3 :" + Data.p3.getBalance());
+        bl.goToNextStop(Data.bus20);
        
+        System.out.println("Pas3 :" + Data.p3.getBalance());
+        
         Data.bus20.passengers.onNext(Data.p4);
     }
 }
